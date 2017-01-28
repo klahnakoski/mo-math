@@ -409,3 +409,5 @@ def almost_equal(first, second, digits=None, places=None, delta=None):
         from mo_logs import Log
         Log.error("problem comparing", cause=e)
 
+from mo_math import stats
+_ = stats
