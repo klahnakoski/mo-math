@@ -1,3 +1,4 @@
+mo-json
 mo-logs
 pyDots
 
