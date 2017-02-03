@@ -7,9 +7,12 @@ Basic math functions that have been stabilized to act well over `Null`
 Overview
 --------
 
-Many of the basic math functions you know and love, with the additional benefit that they do not throw exceptions and do not return `NaN`. Rather, all function return `Null` in the exceptional case.
+Many of the basic math functions you know and love, with the additional benefit 
+that they do not throw exceptions and do not return `NaN`. Rather, all function 
+return `Null` in the exceptional case.
 
-These functions are all static methods. This ensures you call the functions with `Math.` prefix, like 
+These functions are all static methods. This ensures you call the functions 
+with `Math.` prefix, like 
 
 	Math.abs(-42)
 
@@ -30,10 +33,12 @@ Most functions need no introduction, so are not listed here. Some of the interes
 
 
 
-The all-caps aggregate functions accept only one parameter; an iterable. Null values are ignored. If all values are Null, the function returns Null.
+The all-caps aggregate functions accept only one parameter; an iterable. Null 
+values are ignored. If all values are Null, the function returns Null.
 
-- `Math.COUNT(values)` 
-- `Math.SUM(values)` - 
-- `Math.MIN(values)` - 
-- `Math.MAX(values)` - 
+- `COUNT(values)` 
+- `SUM(values)` - 
+- `PRODUCT(values)` - 
+- `MIN(values)` - 
+- `MAX(values)` - 
 
