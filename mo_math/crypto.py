@@ -54,7 +54,7 @@ def encrypt(text, _key, salt=None):
     for _, d in _groupby16(data):
         encrypted.extend(aes_cbc_256.encrypt_block(d))
     output.data = bytes2base64(encrypted)
-    json = get_module("mo-json").value2json(output)
+    json = get_module("mo_json").value2json(output)
 
     if DEBUG:
         test = decrypt(json, _key)
@@ -72,7 +72,7 @@ def decrypt(data, _key):
     if _key is None:
         Log.error("Expecting a key")
 
-    _input = get_module("mo-json").json2value(data)
+    _input = get_module("mo_json").json2value(data)
 
     # Initialize encryption using key and iv
     key_expander_256 = key_expander.KeyExpander(256)
@@ -91,7 +91,7 @@ def decrypt(data, _key):
 
 def bytes2base64(value):
     if isinstance(value, bytearray):
-        value=str(value)
+        value = str(value)
     return base64.b64encode(value).decode("utf8")
 
 
@@ -103,7 +103,10 @@ def base642bytearray(value):
 
 
 def _groupby16(bytes):
+    count = 0
     index = 0
     length = len(bytes)
-    while index <= length:
-        yield index, bytes[index * 16: (index + 1) * 16]
+    while index < length:
+        yield count, bytes[index: index + 16]
+        count += 1
+        index += 16
