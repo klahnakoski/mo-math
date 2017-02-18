@@ -44,7 +44,7 @@ def find_packages(where='.', lib_prefix='', exclude=()):
 
 setup(
     name='mo-math',
-    version="1.0.17048",
+    version="1.0.17049",
     description='More Math! Many of the aggregates you are familiar with, but they ignore Nones',
     long_description=long_desc,
     author='Kyle Lahnakoski',
