@@ -44,7 +44,7 @@ def find_packages(where='.', lib_prefix='', exclude=()):
 
 setup(
     name='mo-math',
-    version="1.2.17227",
+    version="1.2.18029",
     description='More Math! Many of the aggregates you are familiar with, but they ignore Nones',
     long_description=long_desc,
     author='Kyle Lahnakoski',
@@ -52,7 +52,7 @@ setup(
     url='https://github.com/klahnakoski/mo-math',
     license='MPL 2.0',
     packages=find_packages(".", lib_prefix=""),
-    install_requires=["mo-dots", "mo-json", "mo-logs"],
+    install_requires=["mo-dots","mo-future","mo-json","mo-logs"],
     include_package_data=True,
     zip_safe=False,
     classifiers=[  #https://pypi.python.org/pypi?%3Aaction=list_classifiers
