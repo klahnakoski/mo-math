@@ -1,0 +1,16 @@
+{
+    "name": "mo-math",
+    "version": "2.18.18240",
+    "description": "More Math! Many of the aggregates you are familiar with, but they ignore Nones",
+    "author": "Kyle Lahnakoski",
+    "author_email": "kyle@lahnakoski.com",
+    "url": "https://github.com/klahnakoski/mo-math",
+    "license": "MPL 2.0",
+    "include_package_data": true,
+    "classifiers": [
+        "Development Status :: 4 - Beta",
+        "Topic :: Software Development :: Libraries",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+        "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)"
+    ]
+}
