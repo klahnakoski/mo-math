@@ -1,17 +1,15 @@
 
-More Math!  
-==========
+# More Math!  
 
 Basic math functions that have been stabilized to act well over `Null`
 
-Overview
---------
+## Overview
 
 Many of the basic math functions you know and love, with the additional benefit 
 that they do not throw exceptions and do not return `NaN`. Rather, all function 
 return `Null` in the exceptional case.
 
-These functions are all static methods. This ensures you call the functions 
+These functions are all class methods. Be sure you call the functions 
 with `Math.` prefix, like 
 
 	Math.abs(-42)
@@ -19,8 +17,7 @@ with `Math.` prefix, like
 This prevents confusion with the built-in functions by the same name   
 
 
-Functions
----------
+## Functions
 
 Most functions need no introduction, so are not listed here. Some of the interesting ones are:
 
@@ -32,13 +29,12 @@ Most functions need no introduction, so are not listed here. Some of the interes
 - `Math.sign(v)` - Missing from the Python library 
 
 
-
 The all-caps aggregate functions accept only one parameter; an iterable. Null 
 values are ignored. If all values are Null, the function returns Null.
 
-- `COUNT(values)` 
-- `SUM(values)` - 
-- `PRODUCT(values)` - 
-- `MIN(values)` - 
-- `MAX(values)` - 
+- `COUNT(values)`
+- `SUM(values)` 
+- `PRODUCT(values)` 
+- `MIN(values)` 
+- `MAX(values)` 
 
