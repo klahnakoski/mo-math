@@ -2,3 +2,6 @@
 /dist
 /mo_math.egg-info
 .svn
+.idea
+*.iml
+/vendor

@@ -14,7 +14,7 @@ from mo_dots import Data, get_module
 from mo_future import PY2, binary_type
 from mo_future import is_text, is_binary
 from mo_logs import Log
-from mo_math import base642bytes
+from mo_math import base642bytes, bytes2base64
 from mo_math.randoms import Random
 from mo_math.vendor.aespython import aes_cipher, cbc_mode, key_expander
 
