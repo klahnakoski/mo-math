@@ -38,3 +38,6 @@ The all-caps aggregate functions accept only one parameter; an iterable. They ar
 - `MIN(values)` 
 - `MAX(values)` 
 
+## Crypto
+
+The AES and RSA crypto functions provide structured input/output on top of `cryptography` library. The intent is to reveal the signed/excrypted structures so third parties can decode the data.

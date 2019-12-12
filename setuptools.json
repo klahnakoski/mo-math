@@ -9,7 +9,7 @@
     ],
     "description": "More Math! Many of the aggregates you are familiar with, but they ignore Nones",
     "include_package_data": true,
-    "install_requires": ["mo-dots>=3.2.19316", "mo-future>=3.1.19316", "mo-logs>=3.5.19316"],
+    "install_requires": ["mo-dots>=3.22.19344", "mo-future>=3.17.19324", "mo-logs>=3.21.19344"],
     "license": "MPL 2.0",
     "long_description": {
         "$concat": [
@@ -53,6 +53,9 @@
             "- `MIN(values)` ",
             "- `MAX(values)` ",
             "",
+            "## Crypto",
+            "",
+            "The AES and RSA crypto functions provide structured input/output on top of `cryptography` library. The intent is to reveal the signed/excrypted structures so third parties can decode the data.",
             ""
         ],
         "separator": "\n"
@@ -64,5 +67,5 @@
                   "mo_math/vendor",                  "mo_math"
     ],
     "url": "https://github.com/klahnakoski/mo-math",
-    "version": "3.7.19316"
+    "version": "3.23.19346"
 }
