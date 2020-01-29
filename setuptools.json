@@ -11,7 +11,7 @@
     ],
     "description": "More Math! Many of the aggregates you are familiar with, but they ignore Nones",
     "include_package_data": true,
-    "install_requires": ["mo-dots>=3.22.19344", "mo-future>=3.17.19324", "mo-logs>=3.21.19344"],
+    "install_requires": ["mo-dots>=3.33.20028", "mo-future>=3.32.20028", "mo-logs>=3.38.20029"],
     "license": "MPL 2.0",
     "long_description": {
         "$concat": [
@@ -70,5 +70,5 @@
     ],
     "python_requires": "==2.7, >=3.6",
     "url": "https://github.com/klahnakoski/mo-math",
-    "version": "3.28.19346"
+    "version": "3.38.20029"
 }
