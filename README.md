@@ -18,7 +18,7 @@ This prevents confusion with the `__builtin__` functions by the same name
 
 ## Functions
 
-Functions are generally "conservative" in the face of nulls: Specifically, they return `Null` if any of their operands are not a number.
+Functions are generally [conservative](https://github.com/mozilla/ActiveData/blob/dev/docs/jx_decisive_operators.md#definitions) in the face of nulls: Specifically, they return `Null` if any of their operands are not a number.
 
 Most functions need no introduction, but some are interesting:
 
@@ -30,7 +30,7 @@ Most functions need no introduction, but some are interesting:
 - `sign(v)` - Missing from the Python library 
 
 
-The all-caps aggregate functions accept only one parameter; an iterable. They are "decisive" operators: Non-numbers are ignored, if no values are numbers then the aggregate will return `Null`.
+The all-caps aggregate functions accept only one parameter; an iterable. They are [decisive](https://github.com/mozilla/ActiveData/blob/dev/docs/jx_decisive_operators.md#definitions) operators: Non-numbers are ignored, if no values are numbers then the aggregate will return `Null`.
 
 - `COUNT(values)`
 - `SUM(values)` 
@@ -40,4 +40,4 @@ The all-caps aggregate functions accept only one parameter; an iterable. They ar
 
 ## Crypto
 
-The AES and RSA crypto functions provide structured input/output on top of `cryptography` library. The intent is to reveal the signed/excrypted structures so third parties can decode the data.
+The AES and RSA crypto functions provide structured input/output on top of `cryptography` library. The intent is to reveal the signed/encrypted structures so third parties can decode the data.
