@@ -35,7 +35,7 @@
             "",
             "## Functions",
             "",
-            "Functions are generally \"conservative\" in the face of nulls: Specifically, they return `Null` if any of their operands are not a number.",
+            "Functions are generally [conservative](https://github.com/mozilla/ActiveData/blob/dev/docs/jx_decisive_operators.md#definitions) in the face of nulls: Specifically, they return `Null` if any of their operands are not a number.",
             "",
             "Most functions need no introduction, but some are interesting:",
             "",
@@ -47,7 +47,7 @@
             "- `sign(v)` - Missing from the Python library ",
             "",
             "",
-            "The all-caps aggregate functions accept only one parameter; an iterable. They are \"decisive\" operators: Non-numbers are ignored, if no values are numbers then the aggregate will return `Null`.",
+            "The all-caps aggregate functions accept only one parameter; an iterable. They are [decisive](https://github.com/mozilla/ActiveData/blob/dev/docs/jx_decisive_operators.md#definitions) operators: Non-numbers are ignored, if no values are numbers then the aggregate will return `Null`.",
             "",
             "- `COUNT(values)`",
             "- `SUM(values)` ",
@@ -57,7 +57,7 @@
             "",
             "## Crypto",
             "",
-            "The AES and RSA crypto functions provide structured input/output on top of `cryptography` library. The intent is to reveal the signed/excrypted structures so third parties can decode the data.",
+            "The AES and RSA crypto functions provide structured input/output on top of `cryptography` library. The intent is to reveal the signed/encrypted structures so third parties can decode the data.",
             ""
         ],
         "separator": "\n"
@@ -70,5 +70,5 @@
     ],
     "python_requires": "==2.7, >=3.6",
     "url": "https://github.com/klahnakoski/mo-math",
-    "version": "3.38.20029"
+    "version": "3.39.20030"
 }
