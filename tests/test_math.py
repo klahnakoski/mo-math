@@ -15,7 +15,7 @@ from math import floor
 from mo_testing.fuzzytestcase import FuzzyTestCase
 
 import mo_math
-from mo_math.randoms import Random
+from mo_math import randoms
 
 
 class TestMath(FuzzyTestCase):
@@ -50,14 +50,14 @@ class TestMath(FuzzyTestCase):
 
     def test_floor_mod_identity(self):
         for i in range(100):
-            x = Random.float()*200 - 100.0
+            x = randoms.float()*200 - 100.0
             m = abs(random.gauss(0, 5))
 
             self.assertAlmostEqual(mo_math.floor(x, m)+mo_math.mod(x, m), x, places=7)
 
     def test_floor_mod_identity_w_ints(self):
         for i in range(100):
-            x = Random.float()*200 - 100.0
+            x = randoms.float()*200 - 100.0
             m = floor(abs(random.gauss(0, 5)))
 
             if m == 0:
