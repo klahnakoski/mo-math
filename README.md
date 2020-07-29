@@ -26,7 +26,7 @@ Most functions need no introduction, but some are interesting:
 - `floor(value, mod=1)` - The `mod`ulo parameter is used to specify the granularity of the floor function.
 - `ceiling(value, mod=1)` - Return the smallest value, that's larger than `value`, with suitable granularity.
 - `mod(value, mod=1)` - Works on floats
-- `approx_str(value)` - Round values, and return unicode 
+- `approx_str(value)` - Round values, and return `text` (`unicode` in py2, `str` in py3) 
 - `sign(v)` - Missing from the Python library 
 
 
