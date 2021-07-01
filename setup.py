@@ -5,7 +5,7 @@ from setuptools import setup
 setup(
     author='Kyle Lahnakoski',
     author_email='kyle@lahnakoski.com',
-    classifiers=["Programming Language :: Python :: 2.7","Programming Language :: Python :: 3.7","Development Status :: 4 - Beta","Topic :: Software Development :: Libraries","Topic :: Software Development :: Libraries :: Python Modules","License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)"],
+    classifiers=["Development Status :: 4 - Beta","Programming Language :: Python :: 3.7","Programming Language :: Python :: 3.9","Topic :: Software Development :: Libraries","Topic :: Software Development :: Libraries :: Python Modules","License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)"],
     description='More Math! Many of the aggregates you are familiar with, but null-safe',
     include_package_data=True,
     install_requires=["mo-dots==5.17.21182","mo-future==5.17.21182","mo-logs==5.20.21182"],
@@ -15,5 +15,5 @@ setup(
     name='mo-math',
     packages=["mo_math/vendor/aespython","mo_math/vendor/strangman","mo_math/vendor","mo_math"],
     url='https://github.com/klahnakoski/mo-math',
-    version='5.20.21182'
+    version='5.21.21182'
 )
