@@ -12,7 +12,7 @@
     "description": "More Math! Many of the aggregates you are familiar with, but null-safe",
     "extras_require": {"tests": ["mo-json", "mo-testing", "pyLibrary"]},
     "include_package_data": true,
-    "install_requires": ["mo-dots==5.22.21182", "mo-future==5.17.21182", "mo-logs==5.44.21241"],
+    "install_requires": ["mo-dots==7.4.21313", "mo-future==6.2.21303", "mo-logs==7.4.21313"],
     "license": "MPL 2.0",
     "long_description": {
         "$concat": [
@@ -20,6 +20,14 @@
             "# More Math!  ",
             "",
             "Basic math functions that have been stabilized to act well over `Null`/`None`/`NaN`",
+            "",
+            "",
+            "|Branch      |Status   |",
+            "|------------|---------|",
+            "|master      | [![Build Status](https://app.travis-ci.com/klahnakoski/mo-math.svg?branch=master)](https://travis-ci.com/github/klahnakoski/mo-math) |",
+            "|dev         | [![Build Status](https://app.travis-ci.com/klahnakoski/mo-math.svg?branch=dev)](https://travis-ci.com/github/klahnakoski/mo-math)    |",
+            "",
+            "",
             "",
             "## Overview",
             "",
@@ -29,7 +37,13 @@
             "These functions are all module methods. Be sure you call the functions ",
             "with `mo_math.` prefix, like ",
             "",
+            "    import mo_math",
             "\tmo_math.abs(-42)",
+            "",
+            "or rename the functions",
+            "",
+            "    from mo_math import abs as mo_abs",
+            "    mo_abs(-42)",
             "",
             "This prevents confusion with the `__builtin__` functions by the same name   ",
             "",
@@ -42,7 +56,7 @@
             "",
             "- `round(value, decimal=7, digits=None)` - Rounds to 7 decimal points, unless specified differently.  Rounding to `decimal=0` will return an `int`. The useful parameter here is `digits`, which rounds to a specified number of significant digits.",
             "- `floor(value, mod=1)` - The `mod`ulo parameter is used to specify the granularity of the floor function.",
-            "- `ceiling(value, mod=1)` - Return the smallest value, that's larger than `value`, with suitable granularity.",
+            "- `ceiling(value, mod=1)` - Return the smallest value, that's equal or larger than `value`, with suitable granularity.",
             "- `mod(value, mod=1)` - Works on floats",
             "- `approx_str(value)` - Round values, and return `text` (`unicode` in py2, `str` in py3) ",
             "- `sign(v)` - Missing from the Python library ",
@@ -70,5 +84,5 @@
                   "mo_math/vendor",                  "mo_math"
     ],
     "url": "https://github.com/klahnakoski/mo-math",
-    "version": "5.53.21241"
+    "version": "7.4.21313"
 }
