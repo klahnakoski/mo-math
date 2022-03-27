@@ -215,14 +215,9 @@ def mod(value, mod=1):
     RETURN NON-NEGATIVE MODULO
     RETURN None WHEN GIVEN INVALID ARGUMENTS
     """
-    if value == None:
+    if value == None or mod <= 0:
         return None
-    elif mod <= 0:
-        return None
-    elif value < 0:
-        return (value % mod + mod) % mod
-    else:
-        return value % mod
+    return value % mod
 
 
 # RETURN A VALUE CLOSE TO value, BUT WITH SHORTER len(text(value))<len(text(value)):
