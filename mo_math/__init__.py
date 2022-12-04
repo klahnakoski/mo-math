@@ -21,7 +21,7 @@ from math import (
 )
 
 from mo_dots import Null, coalesce, is_container
-from mo_future import round as _round, text, __builtin__, binary_type
+from mo_future import round as math_round, text, __builtin__, binary_type
 from mo_imports import delay_import
 
 logger = delay_import("mo_logs.Log")
@@ -86,7 +86,7 @@ def log(v, base=None):
         if v == None:
             return Null
         if v == 0.0:
-            return -float("inf")
+            return Null
         if base == None:
             return math_log(v)
         return math_log(v, base)
@@ -144,7 +144,7 @@ def is_integer(s):
         return False
 
     try:
-        if float(s) == round(float(s), 0):
+        if float(s) == math_round(float(s), 0):
             return True
         return False
     except Exception:
@@ -183,14 +183,14 @@ def round(value, decimal=0, digits=None):
             if digits <= 0:
                 return sign(value) * pow(10, round(math_log10(abs(value)), 0))
             m = pow(10, math_ceil(math_log10(abs(value))))
-            return _round(value / m, digits) * m
+            return math_round(value / m, digits) * m
         except Exception as e:
 
             logger.error("not expected", e)
     elif decimal <= 0:
-        return int(_round(value, decimal))
+        return int(math_round(value, decimal))
     else:
-        return _round(value, decimal)
+        return math_round(value, decimal)
 
 
 def floor(value, mod=1):
@@ -464,8 +464,3 @@ def int2base64(value):
 
 def base642int(value):
     return int.from_bytes(base642bytes(value), byteorder="big")
-
-
-from mo_math import stats
-
-_ = stats
