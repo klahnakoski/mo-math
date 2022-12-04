@@ -22,6 +22,10 @@ from math import (
 
 from mo_dots import Null, coalesce, is_container
 from mo_future import round as _round, text, __builtin__, binary_type
+from mo_imports import delay_import
+
+logger = delay_import("mo_logs.Log")
+
 
 """
 MATH FUNCTIONS THAT ASSUME None IMPLY *NOT APPLICABLE* RATHER THAN *MISSING*
@@ -41,17 +45,15 @@ INFINITY = float("+inf")
 def bayesian_add(*args):
     a = args[0]
     if a >= 1 or a <= 0:
-        from mo_logs import Log
 
-        Log.error("Only allowed values *between* zero and one")
+        logger.error("Only allowed values *between* zero and one")
 
     for b in args[1:]:
         if b == None:
             continue
         if b >= 1 or b <= 0:
-            from mo_logs import Log
 
-            Log.error("Only allowed values *between* zero and one")
+            logger.error("Only allowed values *between* zero and one")
         a = a * b / (a * b + (1 - a) * (1 - b))
 
     return a
@@ -89,9 +91,8 @@ def log(v, base=None):
             return math_log(v)
         return math_log(v, base)
     except Exception as e:
-        from mo_logs import Log
 
-        Log.error("error in log", cause=e)
+        logger.error("error in log", cause=e)
 
 
 def log10(v):
@@ -184,9 +185,8 @@ def round(value, decimal=0, digits=None):
             m = pow(10, math_ceil(math_log10(abs(value))))
             return _round(value / m, digits) * m
         except Exception as e:
-            from mo_logs import Log
 
-            Log.error("not expected", e)
+            logger.error("not expected", e)
     elif decimal <= 0:
         return int(_round(value, decimal))
     else:
@@ -278,9 +278,8 @@ def COUNT(values):
 
 def MIN(values, *others):
     if others:
-        from mo_logs import Log
 
-        Log.warning("Calling wrong")
+        logger.warning("Calling wrong")
         return MIN([values] + list(others))
 
     output = None
@@ -303,9 +302,8 @@ def MAX(values, *others):
     """
 
     if others:
-        from mo_logs import Log
 
-        Log.warning("Calling wrong")
+        logger.warning("Calling wrong")
         return MAX([values] + list(others))
 
     output = Null
@@ -335,9 +333,8 @@ def SUM(values):
 
 def PRODUCT(values, *others):
     if len(others) > 0:
-        from mo_logs import Log
 
-        Log.error("no longer accepting args, use a single list")
+        logger.error("no longer accepting args, use a single list")
 
     output = Null
     for v in values:
@@ -354,9 +351,8 @@ def PRODUCT(values, *others):
 
 def AND(values, *others):
     if len(others) > 0:
-        from mo_logs import Log
 
-        Log.error("no longer accepting args, use a single list")
+        logger.error("no longer accepting args, use a single list")
 
     for v in values:
         if v == None:
@@ -368,9 +364,8 @@ def AND(values, *others):
 
 def OR(values, *others):
     if len(others) > 0:
-        from mo_logs import Log
 
-        Log.error("no longer accepting args, use a single list")
+        logger.error("no longer accepting args, use a single list")
 
     for v in values:
         if v == None:
@@ -382,9 +377,8 @@ def OR(values, *others):
 
 def UNION(values, *others):
     if len(others) > 0:
-        from mo_logs import Log
 
-        Log.error("no longer accepting args, use a single list")
+        logger.error("no longer accepting args, use a single list")
 
     output = set()
     for v in values:
@@ -411,9 +405,8 @@ def is_number(s):
 
 def INTERSECT(values, *others):
     if len(others) > 0:
-        from mo_logs import Log
 
-        Log.error("no longer accepting args, use a single list")
+        logger.error("no longer accepting args, use a single list")
 
     output = set(values[0])
     for v in values[1:]:
@@ -439,9 +432,8 @@ def almost_equal(first, second, digits=None, places=None, delta=None):
 
         return False
     except Exception as e:
-        from mo_logs import Log
 
-        Log.error("problem comparing", cause=e)
+        logger.error("problem comparing", cause=e)
 
 
 def bytes2base64(value):
