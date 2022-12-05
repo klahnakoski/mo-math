@@ -278,7 +278,6 @@ def COUNT(values):
 
 def MIN(values, *others):
     if others:
-
         logger.warning("Calling wrong")
         return MIN([values] + list(others))
 
