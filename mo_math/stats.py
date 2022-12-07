@@ -41,7 +41,6 @@ def chisquare(f_obs, f_exp):
     try:
         py_result = strangman.stats.chisquare(f_obs, f_exp)
     except Exception as e:
-
         logger.error("problem with call", e)
 
     if DEBUG_STRANGMAN:
@@ -89,7 +88,6 @@ def Stats2ZeroMoment(stats):
             assertAlmostEqualValue(v.kurtosis, stats.kurtosis, places=10)
         except Exception as e:
             v = ZeroMoment2Stats(m)
-
             logger.error("programmer error")
         globals()["DEBUG"] = True
     return m
@@ -136,10 +134,8 @@ def ZeroMoment2Stats(z_moment):
             for i in range(5):
                 assertAlmostEqualValue(v.S[i], Z[i], places=7)
         except Exception as e:
-
             logger.error(
-                "Conversion failed.  Programmer error:\nfrom={{from|indent}},\nresult"
-                " stats={{stats|indent}},\nexpected param={{expected|indent}}",
+                "Conversion failed.  Programmer error:\nfrom={{from|indent}},\nresult stats={{stats|indent}},\nexpected param={{expected|indent}}",
                 {"from": Z},
                 stats=stats,
                 expected=v.S,
@@ -351,7 +347,6 @@ def median(values, simple=True, mean_weight=0.0):
             else:
                 return (_median - 0.5) + (middle + 0.5 - start_index) / num_middle
     except Exception as e:
-
         logger.error("problem with median of {{values}}", values=values, cause=e)
 
 
