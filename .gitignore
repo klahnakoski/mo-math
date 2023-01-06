@@ -5,5 +5,7 @@
 .idea
 *.iml
 /vendor
-./setup.py
+
+/setup.py
+
 
