@@ -21,7 +21,7 @@ from math import (
 )
 
 from mo_dots import Null, coalesce, is_container
-from mo_future import round as math_round, text, __builtin__, binary_type
+from mo_future import round as math_round, text, __builtin__, binary_type, POS_INF
 from mo_imports import delay_import
 
 logger = delay_import("mo_logs.Log")
@@ -39,7 +39,7 @@ func(None, *kwargs)) == None
 math_abs = __builtin__.abs
 
 
-INFINITY = float("+inf")
+INFINITY = POS_INF
 
 
 def bayesian_add(*args):
