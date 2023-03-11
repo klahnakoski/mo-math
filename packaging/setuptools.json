@@ -8,12 +8,13 @@
         "Programming Language :: Python :: 3.9",
         "Topic :: Software Development :: Libraries",
         "Topic :: Software Development :: Libraries :: Python Modules",
-        "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)"
+        "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)",
+        "Programming Language :: Python :: 3.10"
     ],
     "description": "More Math! Many of the aggregates you are familiar with, but null-safe",
     "extras_require": {"tests": ["mo-json", "mo-testing", "pyLibrary"]},
     "include_package_data": true,
-    "install_requires": ["mo-dots==9.341.23006", "mo-future==7.340.23006"],
+    "install_requires": ["mo-dots==9.356.23062", "mo-future==7.340.23006"],
     "license": "MPL 2.0",
     "long_description": {
         "$concat": [
@@ -85,5 +86,5 @@
                   "mo_math/vendor",                  "mo_math"
     ],
     "url": "https://github.com/klahnakoski/mo-math",
-    "version": "7.341.23006"
+    "version": "7.358.23070"
 }
