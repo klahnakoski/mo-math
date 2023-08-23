@@ -23,7 +23,7 @@ from mo_math.vendor import strangman
 
 logger = delay_import("mo_logs.Log")
 
-DEBUG = True
+DEBUG = False
 DEBUG_STRANGMAN = False
 EPSILON = 0.000000001
 ABS_EPSILON = sys.float_info.min * 2  # *2 FOR SAFETY
