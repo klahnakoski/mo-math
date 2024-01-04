@@ -75,3 +75,10 @@ class TestMath(FuzzyTestCase):
 
     def test_random_hex(self):
         self.assertEqual(len(randoms.hex(5)), 5)
+
+    def test_to_float(self):
+        self.assertEqual(mo_math.to_float(1), 1.0)
+        self.assertEqual(mo_math.to_float("1"), 1.0)
+        self.assertEqual(mo_math.to_float("1.0"), 1.0)
+        self.assertEqual(mo_math.to_float("1.1"), 1.1)
+        self.assertEqual(mo_math.to_float("1.1a"), None)

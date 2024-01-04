@@ -165,6 +165,18 @@ def to_integer(s):
         return Null
 
 
+def to_float(s):
+    if s is True:
+        return 1.0
+    if s is False:
+        return 0.0
+
+    try:
+        return float(s)
+    except Exception:
+        return Null
+
+
 def round(value, decimal=0, digits=None):
     """
     ROUND TO GIVEN NUMBER OF DIGITS, OR GIVEN NUMBER OF DECIMAL PLACES
