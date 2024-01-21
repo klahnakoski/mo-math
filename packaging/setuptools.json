@@ -15,7 +15,7 @@
     "description": "More Math! Many of the aggregates you are familiar with, but null-safe",
     "extras_require": {"tests": ["mo-json", "mo-testing", "pyLibrary"]},
     "include_package_data": true,
-    "install_requires": ["mo-dots==9.476.24007", "mo-future==7.476.24007"],
+    "install_requires": ["mo-dots==9.490.24021", "mo-future==7.476.24007"],
     "license": "MPL 2.0",
     "long_description": {
         "$concat": [
@@ -87,5 +87,5 @@
                   "mo_math/vendor",                  "mo_math"
     ],
     "url": "https://github.com/klahnakoski/mo-math",
-    "version": "7.476.24007"
+    "version": "7.490.24021"
 }
