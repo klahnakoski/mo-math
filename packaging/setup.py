@@ -15,5 +15,5 @@ setup(
     name='mo-math',
     packages=["mo_math/vendor/aespython","mo_math/vendor/strangman","mo_math/vendor","mo_math"],
     url='https://github.com/klahnakoski/mo-math',
-    version='7.491.24021'
+    version='7.492.24021'
 )
