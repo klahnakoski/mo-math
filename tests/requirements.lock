@@ -1,4 +1,4 @@
-# Tests pass with these versions 2024-01-31T03:52:32Z
+# Tests pass with these versions 2024-01-31T03:56:02Z
 hjson==3.1.0
 mo-collections==5.508.24028
 mo-dots==8.519.24031
@@ -7,10 +7,9 @@ mo-imports==5.519.24031
 mo-json==6.511.24028
 mo-kwargs==7.508.24028
 mo-logs==8.508.24028
-mo-math==7.508.24028
+mo-math==7.519.24031
 mo-testing==3.124.20293
 mo-threads==6.508.24028
 mo-times==5.508.24028
 pip==23.3.2
 setuptools==69.0.3
-wheel==0.42.0
