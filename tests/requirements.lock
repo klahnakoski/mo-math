@@ -1,0 +1,14 @@
+hjson==3.1.0
+mo-collections==5.508.24028
+mo-dots==8.518.24031
+mo-future==7.507.24028
+mo-imports==5.509.24030
+mo-json==6.511.24028
+mo-kwargs==7.508.24028
+mo-logs==8.508.24028
+mo-math==7.518.24031
+mo-testing==3.124.20293
+mo-threads==6.508.24028
+mo-times==5.508.24028
+pip==23.3.2
+setuptools==69.0.3
