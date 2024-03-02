@@ -6,7 +6,7 @@ Basic math functions that have been stabilized to act well over `Null`/`None`/`N
 
 |Branch      |Status   |
 |------------|---------|
-|master      | [![Build Status](https://app.travis-ci.com/klahnakoski/mo-math.svg?branch=master)](https://travis-ci.com/github/klahnakoski/mo-math) |
+|master      |  [![Build Status](https://github.com/klahnakoski/mo-math/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/klahnakoski/mo-math/actions/workflows/build.yml) |
 |dev         | [![Build Status](https://app.travis-ci.com/klahnakoski/mo-math.svg?branch=dev)](https://travis-ci.com/github/klahnakoski/mo-math)    |
 
 
