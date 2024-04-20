@@ -8,7 +8,6 @@
 # Author: Kyle Lahnakoski (kyle@lahnakoski.com)
 #
 
-# from __future__ import unicode_literals
 import random
 from math import floor
 
