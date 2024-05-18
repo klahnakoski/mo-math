@@ -14,7 +14,7 @@ from math import floor
 from mo_testing.fuzzytestcase import FuzzyTestCase
 
 import mo_math
-from mo_math import randoms
+from mo_math import randoms, almost_equal
 
 
 class TestMath(FuzzyTestCase):
@@ -81,3 +81,50 @@ class TestMath(FuzzyTestCase):
         self.assertEqual(mo_math.to_float("1.0"), 1.0)
         self.assertEqual(mo_math.to_float("1.1"), 1.1)
         self.assertEqual(mo_math.to_float("1.1a"), None)
+
+    def test_raises_when_different1(self):
+        self.assertFalse(almost_equal(1, 0.1, 6))
+
+    def test_raises_when_different2(self):
+        self.assertFalse(almost_equal(1.000001, 1.000002, 7))
+
+    def test_raises_when_different3(self):
+        self.assertFalse(almost_equal(1.000001, 1.0000016, 7))
+
+    def test_raises_when_different4(self):
+        self.assertFalse(almost_equal(1.000001, 1.0000015, digits=7))
+
+    def test_ok_when_same1(self):
+        self.assertTrue(almost_equal(1.000001, 1.0000011, digits=7))
+
+    def test_ok_when_same2(self):
+        self.assertTrue(almost_equal(1.000002, 1.0000025, digits=7))
+
+    # tests for number of significant digits (places)
+    def test_raises_when_different_places1(self):
+        self.assertFalse(almost_equal(1.0001, 1.0002, places=5))
+
+    def test_raises_when_different_places2(self):
+        self.assertFalse(almost_equal(1.0001, 1.00016, places=5))
+
+    def test_raises_when_different_places3(self):
+        self.assertFalse(almost_equal(100.01, 100.016, places=5))
+
+    def test_raises_when_different_places4(self):
+        self.assertFalse(almost_equal(0.0010001, 0.00100016, places=5))
+
+    def test_ok_when_same_places1(self):
+        self.assertTrue(almost_equal(1.0001, 1.0001499999, places=5))
+
+    def test_ok_when_same_places5(self):
+        self.assertTrue(almost_equal(1.0002, 1.00025, places=5))
+
+    def test_ok_when_same_places2(self):
+        self.assertTrue(almost_equal(100.01, 100.015, places=5))
+
+    def test_ok_when_same_places3(self):
+        self.assertTrue(almost_equal(0.0010001, 0.00100015, places=5))
+
+    def test_ok_when_same_places4(self):
+        self.assertTrue(almost_equal(0.0010001, 0.00100016, places=4))
+

@@ -10,9 +10,10 @@
 from mo_math import stats
 
 from mo_math.stats import ZeroMoment, ZeroMoment2Stats
-from mo_testing.fuzzytestcase import FuzzyTestCase
+from mo_testing.fuzzytestcase import FuzzyTestCase, add_error_reporting
 
 
+@add_error_reporting
 class TestStats(FuzzyTestCase):
 
     def setUp(self):
