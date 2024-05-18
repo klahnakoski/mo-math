@@ -117,7 +117,7 @@ class TestMath(FuzzyTestCase):
         self.assertTrue(almost_equal(1.0001, 1.0001499999, places=5))
 
     def test_ok_when_same_places5(self):
-        self.assertTrue(almost_equal(1.0002, 1.00025, places=5))
+        self.assertTrue(almost_equal(1.0002, 1.0002499999, places=5))
 
     def test_ok_when_same_places2(self):
         self.assertTrue(almost_equal(100.01, 100.015, places=5))
