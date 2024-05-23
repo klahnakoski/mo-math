@@ -7,7 +7,7 @@
 #
 # Author: Kyle Lahnakoski (kyle@lahnakoski.com)
 #
-
+import math
 import random
 from math import floor
 
@@ -113,6 +113,9 @@ class TestMath(FuzzyTestCase):
     def test_raises_when_different_places4(self):
         self.assertFalse(almost_equal(0.0010001, 0.00100016, places=5))
 
+    def test_raises_when_different_places5(self):
+        self.assertTrue(almost_equal(100, 100.4, places=3))
+
     def test_ok_when_same_places1(self):
         self.assertTrue(almost_equal(1.0001, 1.0001499999, places=5))
 
@@ -127,4 +130,31 @@ class TestMath(FuzzyTestCase):
 
     def test_ok_when_same_places4(self):
         self.assertTrue(almost_equal(0.0010001, 0.00100016, places=4))
+
+
+    def test_ceiling(self):
+        self.assertEqual(mo_math.ceiling(0), 1)
+        self.assertEqual(mo_math.ceiling(0.1), 1)
+        self.assertEqual(mo_math.ceiling(1), 2)
+        self.assertEqual(mo_math.ceiling(1.1), 2)
+        self.assertEqual(mo_math.ceiling(-1), 0)
+        self.assertEqual(mo_math.ceiling(-1.1), -1)
+
+    def test_ceiling_7(self):
+        self.assertEqual(mo_math.ceiling(0,7), 7)
+        self.assertEqual(mo_math.ceiling(0.1,7), 7)
+        self.assertEqual(mo_math.ceiling(8, 7), 14)
+        self.assertEqual(mo_math.ceiling(1,7), 7)
+        self.assertEqual(mo_math.ceiling(1.1,7), 7)
+        self.assertEqual(mo_math.ceiling(-1,7), 0)
+        self.assertEqual(mo_math.ceiling(-1.1,7), 0)
+        self.assertEqual(mo_math.ceiling(-8, 7), -7)
+
+    def test_builtin_ceiling(self):
+        self.assertEqual(math.ceil(0), 0)
+        self.assertEqual(math.ceil(0.1), 1)
+        self.assertEqual(math.ceil(1), 1)
+        self.assertEqual(math.ceil(1.1), 2)
+        self.assertEqual(math.ceil(-1), -1)
+        self.assertEqual(math.ceil(-1.1), -1)
 
